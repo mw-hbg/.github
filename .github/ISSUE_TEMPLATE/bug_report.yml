@@ -1,0 +1,39 @@
+name: Bug report / Fehlerbericht
+description: Something does not work as expected. / Etwas funktioniert nicht wie erwartet.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! **Never post passwords, tokens, secret URLs or other personal data.**
+        Danke für die Meldung! **Niemals Passwörter, Tokens, geheime URLs oder andere persönliche Daten posten.**
+  - type: input
+    id: version
+    attributes:
+      label: Version of the project / Version des Projekts
+      placeholder: "1.2.3"
+    validations:
+      required: true
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version and installation type / Home-Assistant-Version und Installationsart
+      placeholder: "2026.11.2, Home Assistant OS on Raspberry Pi 5"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened? What did you expect? / Was ist passiert? Was hast du erwartet?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / Schritte zum Nachstellen
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: Check that it contains no personal data before posting. / Vor dem Posten prüfen, dass keine persönlichen Daten enthalten sind.
+      render: text
